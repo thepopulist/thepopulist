@@ -148,6 +148,13 @@ h6 {
     border: 2px solid #C1C1C1;
 }
 
+#message {
+    width: 100%;
+    height: calc(var(--formheight) * 2);
+    resize: none;
+    /* Disable manual resizing */
+}
+
 .form__text .form__input {
     width: 100%;
 }

@@ -1,0 +1,48 @@
+@import '../utils/variables.css';
+
+.header {
+    height: var(--headerheight);
+    padding: calc(var(--padblock) / 3);
+    width: 100%;
+    background-color: var(--color-header);
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__logo {
+    height: 100%;
+}
+
+.logo__image {
+    height: 100%;
+}
+
+.nav {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: var(--martext);
+    padding-right: var(--martext);
+}
+
+.nav__link {
+    color: #fff;
+    font-weight: 700;
+    font-size: var(--pfz);
+}
+
+@media (max-width: 1400px) {
+    .header {
+        padding: 10px;
+    }
+}

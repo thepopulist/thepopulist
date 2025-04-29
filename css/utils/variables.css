@@ -1,0 +1,73 @@
+:root {
+    --h1fz: 50px;
+    --h1lh: 70px;
+    --pfz: 24px;
+    --plh: 30px;
+    --padblock: 150px;
+    --martext: 50px;
+    --formheight: 50px;
+    --container: 1200px;
+    --headerheight: 200px;
+
+    /* Add color variables */
+    --color-bg: #F5F5F5;
+    --color-text: #1F1F1F;
+    --color-accent: #FF7A00;
+    --color-header: #1F1F1F;
+    --color-input-bg: #FAFAFA;
+    --color-input-border: #C1C1C1;
+}
+
+/* Media queries for responsive variables */
+@media (max-width: 1400px) {
+    :root {
+        --h1fz: 40px;
+        --h1lh: 60px;
+        --pfz: 20px;
+        --plh: 26px;
+        --padblock: 100px;
+        --martext: 30px;
+        --formheight: 40px;
+        --headerheight: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --h1fz: 32px;
+        --h1lh: 50px;
+        --pfz: 18px;
+        --plh: 22px;
+        --padblock: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --h1fz: 28px;
+        --h1lh: 42px;
+        --padblock: 50px;
+        --headerheight: 90px;
+    }
+}
+
+@media (max-width: 500px) {
+    :root {
+        --h1fz: 24px;
+        --h1lh: 32px;
+        --pfz: 16px;
+        --plh: 22px;
+        --padblock: 50px;
+        --headerheight: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    :root {
+        --h1fz: 22px;
+        --h1lh: 28px;
+        --pfz: 14px;
+        --plh: 20px;
+        --padblock: 40px;
+    }
+}

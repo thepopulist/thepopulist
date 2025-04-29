@@ -4,19 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/0.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fonts.css">
     <title>The Populist</title>
+
+    <script src="js/config.js"></script>
+    <script src="js/include.js" defer></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__logo">
-            <img src="img/logo.png" alt="logo" class="logo__image">
-        </div>
-        <nav class="nav"></nav>
-    </header>
+    <header class="header" id="header"></header>
     <main class="wrapper">
         <div class="about">
             <div class="container">
@@ -60,25 +56,14 @@
                 </div>
                 <div class="form__text">
                     <input class="form__input" type="email" name="email" placeholder="Email" required>
-                    <textarea class="form__input" type="text" id="message" name="message" placeholder="Message">
-                    </textarea>
+                    <textarea class="form__input" type="text" id="message" name="message"
+                        placeholder="Message"></textarea>
                 </div>
                 <button class="form__btn" type="submit" value="Send">Send</button>
             </div>
         </form>
     </main>
-    <footer class="footer">
-        <p class="footer__name">The Populist</p>
-        <div class="footer__socials">
-            <a href="https://x.com/thepopulistuk" class="footer__image">
-                <img src="img/icons/twitter.svg" alt="twitter">
-            </a>
-            <a href="https://instagram.com/thepopulistuk" class="footer__image">
-                <img src="img/icons/instagram.svg" alt="instagram">
-            </a>
-        </div>
-        <a href="mailto:thepopulist@gmail.com" class="footer__email">thepopulist@gmail.com</a>
-    </footer>
+    <footer class="footer" id="footer"></footer>
 </body>
 
 </html>

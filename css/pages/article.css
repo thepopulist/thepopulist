@@ -1,0 +1,178 @@
+/* Hero section styling */
+.info {
+    padding: var(--headerheight);
+    position: relative;
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    background-image: url('../../img/articles/misingideology.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin-bottom: var(--martext);
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.info__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--padblock) var(--padblock) 0;
+    max-width: var(--container);
+
+}
+
+.article__title {
+    font-size: calc(var(--h1fz) * 2);
+    line-height: calc(var(--h1lh) * 1.1);
+    margin-bottom: calc(var(--martext));
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Article body styling */
+.article {
+    padding: var(--padblock) 0;
+}
+
+.article__meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--martext);
+    font-style: italic;
+    font-size: var(--pfz);
+    color: #d7d7d7;
+}
+
+.article__author {
+    font-weight: 600;
+}
+
+.article__lead {
+    font-size: calc(var(--pfz) * 1.2);
+    line-height: calc(var(--plh) * 1.2);
+    font-weight: 500;
+    margin-bottom: var(--martext);
+}
+
+.article__content p {
+    margin-bottom: calc(var(--martext) / 1.5);
+    font-size: var(--pfz);
+    line-height: var(--plh);
+}
+
+/* References styling */
+sup {
+    cursor: help;
+    font-size: 75%;
+    vertical-align: super;
+    color: var(--color-accent);
+    position: relative;
+    padding: 0 3px;
+}
+
+sup::after {
+    content: attr(data-reference);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-weight: normal;
+    font-style: normal;
+    font-size: calc(var(--pfz) * 0.8);
+    line-height: normal;
+}
+
+sup:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* References section */
+.article__references {
+    margin-top: calc(var(--martext) * 2);
+    padding-top: var(--martext);
+    border-top: 1px solid #eee;
+}
+
+.article__references h3 {
+    font-size: calc(var(--pfz) * 1.2);
+    margin-bottom: calc(var(--martext) / 2);
+}
+
+.article__references ol {
+    padding-left: 20px;
+}
+
+.article__references li {
+    font-size: calc(var(--pfz) * 0.85);
+    line-height: calc(var(--plh) * 0.85);
+    margin-bottom: calc(var(--martext) / 3);
+    color: #444;
+}
+
+/* Article footer */
+.article__footer {
+    margin-top: var(--martext);
+    padding-top: var(--martext);
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: calc(var(--pfz) * 0.85);
+}
+
+.article__copyright {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .info {
+        height: 40vh;
+    }
+
+    .article__title {
+        font-size: var(--h1fz);
+        line-height: var(--h1lh);
+    }
+
+    sup::after {
+        min-width: 250px;
+        left: 0;
+        transform: none;
+    }
+
+    .article__footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .article__copyright {
+        text-align: left;
+    }
+}

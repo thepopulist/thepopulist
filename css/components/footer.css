@@ -1,0 +1,45 @@
+@import '../utils/variables.css';
+
+.footer {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: calc(var(--padblock) / 2);
+}
+
+.footer__name {
+    font-size: var(--pfz);
+    flex: 33%;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: var(--martext);
+    flex: 34%;
+}
+
+.footer__image {
+    width: var(--pfz);
+    height: var(--pfz);
+}
+
+.footer__image img {
+    width: 100%;
+    height: 100%;
+}
+
+.footer__email {
+    font-size: var(--pfz);
+    color: #000;
+    text-decoration: underline;
+    flex: 33%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__email:hover {
+    text-decoration: none;
+}

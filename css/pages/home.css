@@ -1,0 +1,122 @@
+@import '../utils/variables.css';
+
+.about {
+
+    padding: calc(var(--headerheight) + var(--padblock) / 2) 0 var(--padblock);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.about__head {
+    font-size: var(--h1fz);
+    line-height: var(--h1lh);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.about_text {
+    margin: var(--martext) 0;
+    font-size: var(--pfz);
+    line-height: var(--plh);
+    font-weight: 400;
+}
+
+.about__footer {
+    font-size: var(--pfz);
+    line-height: var(--plh);
+    font-weight: 700;
+    font-style: italic;
+}
+
+.form {
+    width: 100%;
+    padding: var(--padblock) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.form__wrapper {
+    width: 100%;
+    padding: calc(var(--padblock) / 2);
+    margin: 0 auto;
+}
+
+.form__head {
+    text-align: center;
+    font-size: var(--h1fz);
+    line-height: var(--plh);
+    margin: 0 0 calc(var(--martext) *2);
+    width: 100%;
+}
+
+.form__name {
+    margin: var(--martext) 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--martext);
+}
+
+.form__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form__input::placeholder {
+    font-size: var(--pfz);
+}
+
+.form__input {
+    flex-grow: 1;
+    flex-basis: fill;
+    margin: 0 0 20px;
+    height: var(--formheight);
+    background-color: var(--color-input-bg);
+    padding: calc(var(--formheight) / 2) calc(var(--formheight) / 4);
+    font-size: var(--pfz);
+    border: 2px solid var(--color-input-border);
+}
+
+#message {
+    width: 100%;
+    height: calc(var(--formheight) * 2);
+    resize: none;
+}
+
+.form__text .form__input {
+    width: 100%;
+}
+
+.form__btn {
+    align-self: start;
+    font-size: var(--pfz);
+    padding: calc(var(--formheight) / 2) calc(var(--formheight));
+    color: #fff;
+    background-color: #000;
+}
+
+@media (max-width: 900px) {
+    .form__name {
+        gap: 0;
+    }
+
+    .form__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .form__btn {
+        width: 100%;
+    }
+}

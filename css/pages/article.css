@@ -3,14 +3,12 @@
     padding: var(--headerheight);
     position: relative;
     min-height: 75vh;
+    max-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1a1a1a;
-    background-image: url('../../img/articles/misingideology.png');
-    background-size: cover;
-    background-position: center;
+    background: #1a1a1a url('../../img/articles/misingideology.png') 50% 50% / cover no-repeat fixed;
     color: #fff;
     margin-bottom: var(--martext);
 }
@@ -29,7 +27,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    padding: var(--padblock) var(--padblock) 0;
+    padding: var(--padblock) var(--padblock);
     max-width: var(--container);
 
 }
@@ -53,7 +51,7 @@
     margin-bottom: var(--martext);
     font-style: italic;
     font-size: var(--pfz);
-    color: #d7d7d7;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .article__author {
@@ -72,6 +70,16 @@
     font-size: var(--pfz);
     line-height: var(--plh);
 }
+
+.paragraph_headliner {
+    font-weight: 700;
+    font-size: calc(var(--pfz) * 1.2);
+}
+
+.text_italic {
+    font-style: italic;
+}
+
 
 /* References styling */
 sup {
@@ -147,12 +155,22 @@ sup:hover::after {
 }
 
 .article__copyright {
-    text-align: right;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-size: calc(var(--pfz) * 0.75);
+    line-height: var(--plh);
+}
+
+@media (max-width: 1230px) {
+    .article {
+        padding: var(--padblock) 30px;
+    }
 }
 
 @media (max-width: 768px) {
     .info {
-        height: 40vh;
+        padding: 0;
     }
 
     .article__title {
@@ -172,7 +190,13 @@ sup:hover::after {
         gap: 10px;
     }
 
-    .article__copyright {
-        text-align: left;
+    .article__references {
+        margin-top: 0;
+    }
+}
+
+@media (max-height: 1000px) {
+    .info {
+        max-height: 70vh;
     }
 }
